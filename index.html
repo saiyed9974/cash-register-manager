@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kalam:wght@300&family=Roboto:wght@400;700&display=swap');
         input{ 
@@ -12,9 +13,12 @@
             margin-left: 3rem;  
             padding:1rem;   
         }
-        h3 {
+        label {
 
             color: aliceblue;
+            display: block;
+            padding: 1rem;
+            margin:auto;
         }
 
         .fontw{
@@ -41,20 +45,21 @@
 <body>
     <div style="max-width: 600px;margin: auto;padding:1rem;background-color: rgb(16, 74, 180);">
 <h1 style="text-align: center; color:yellow">CASH REGISTER</h1>
-<h3 class="fontw">Enter the bill amount and cash given the customer and know minimum number of notes to return</h3>
+<h3 style="color:aliceblue"  class="fontw">Enter the bill amount and cash given the customer and know minimum number of notes to return</h3>
 
-<h3 class="fontw" style="text-align: center;">Bill Amount : </h3>
-<input></input>
+<label for="billAmount" class="fontw" >Bill Amount : </label>
+<input id="billAmount" placeholder="Enter Bill Amount" type="text"></input>
 
-<h3 class="fontw" style="text-align: center;"> Cash Given : </h3>
-<input></input>
+<label class="fontw" for="cashReturn"> Cash Given : </label>
+<input id="cashReturn" placeholder="Enter Cash Given" type="text"></input>
 <p></p>
-<button style="display:block">Check</button>
+<button id="checkbtn" style="display:block">Check</button>
 
+<p id="errormsg" style= "color: aliceblue;">  </p>
 
-<h3 class="fontw" style="text-align: center;">Return Change : </h3>
 
 <table>
+    <caption style="padding: 1rem;color: white;" class="fontw"> Return Change</caption>
     <tr >
         <td style="background-color:yellowgreen;">No of Notes</td>
         <td></td>
@@ -81,5 +86,7 @@
 </table>
 
 </div>
+
 </body>
+<script src="./app.js" type="text/javascript"></script>
 </html>
